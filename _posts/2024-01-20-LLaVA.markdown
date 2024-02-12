@@ -11,8 +11,5 @@ venue: "Preprint"
 #code: https://github.com/leonidk/fmb-plus
 website: https://drive.google.com/drive/folders/1AdTWPddU1lG0e5hEq6gUSSwWp-icR41w?usp=sharing
 ---
-LLaVA-PlantDiag, is a conversational AI system designed for plant pathology.
-We use visual instruction tuning to answer open-ended questions about plant diseases.
-Our model outperforms others like GPT-4 Vision and Gemini,
-scoring 64.7 in multi-turn question-answering and achieving 96% accuracy in classification.
-We also release first multimodal data on plant-pathology.
+LLaVA-PlantDiag, is a conversational AI system designed for plant pathology. We use visual instruction tuning for model finetuning.
+Our model outperforms others like GPT-4 Vision and Gemini, We also release first multimodal data on plant-pathology.
