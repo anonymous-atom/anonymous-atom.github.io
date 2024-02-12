@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "Flexible Techniques for Differentiable Rendering with 3D Gaussians"
-date:   2023-08-28 22:21:59 +00:00
-image: /images/3dgaussian.jpg
+title:  "LLaVA-PlantDiag: Integrating Large-scale Vision-Language Abilities for Conversational Plant Pathology Diagnosis"
+date:   2023-01-20 22:22:00 +00:00
+image: /images/LLaVA_Data.png
 categories: research
-author: "Leo Keselman"
-authors: "<strong>Leonid Keselman</strong>, Martial Hebert"
-venue: "arXiv"
-arxiv: https://arxiv.org/abs/2308.14737
-code: https://github.com/leonidk/fmb-plus
-website: https://leonidk.github.io/fmb-plus
+author: "Karun Sharma"
+authors: "<strong>Karun Sharma</strong>, Vidushee Vats, Abhinendra Singh, Rahul Sahani, Dr. Deepak Rai, Dr. Ashok Sharma"
+venue: "Preprint"
+#arxiv: https://arxiv.org/abs/2308.14737
+#code: https://github.com/leonidk/fmb-plus
+website: https://drive.google.com/drive/folders/1AdTWPddU1lG0e5hEq6gUSSwWp-icR41w?usp=sharing
 ---
-We show how shape reconstruction with 3D Gaussians can be expanded to include differentiable optical flow, colored mesh exports and more. 
+LLaVA-PlantDiag, is a conversational AI system designed for plant pathology. We use visual instruction tuning to answer open-ended questions about plant diseases. Our model outperforms others like GPT-4 Vision and Gemini, scoring 64.7 in multi-turn question-answering and achieving 96% accuracy in classification. We also release first multimodal data on plant-pathology.
