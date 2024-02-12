@@ -2,7 +2,7 @@
 layout: post
 title:  "LLaVA-PlantDiag: Integrating Large-scale Vision-Language Abilities for Conversational Plant Pathology Diagnosis"
 date:   2023-01-20 22:22:00 +00:00
-image: /images/LLaVA_Data.png
+image: /images/LLaVA_Top.png
 categories: research
 author: "Karun Sharma"
 authors: "<strong>Karun Sharma</strong>, Vidushee Vats, Abhinendra Singh, Rahul Sahani, Dr. Deepak Rai, Dr. Ashok Sharma"
@@ -11,4 +11,8 @@ venue: "Preprint"
 #code: https://github.com/leonidk/fmb-plus
 website: https://drive.google.com/drive/folders/1AdTWPddU1lG0e5hEq6gUSSwWp-icR41w?usp=sharing
 ---
-LLaVA-PlantDiag, is a conversational AI system designed for plant pathology. We use visual instruction tuning to answer open-ended questions about plant diseases. Our model outperforms others like GPT-4 Vision and Gemini, scoring 64.7 in multi-turn question-answering and achieving 96% accuracy in classification. We also release first multimodal data on plant-pathology.
+LLaVA-PlantDiag, is a conversational AI system designed for plant pathology.
+We use visual instruction tuning to answer open-ended questions about plant diseases.
+Our model outperforms others like GPT-4 Vision and Gemini,
+scoring 64.7 in multi-turn question-answering and achieving 96% accuracy in classification.
+We also release first multimodal data on plant-pathology.
