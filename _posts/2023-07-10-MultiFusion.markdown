@@ -8,7 +8,7 @@ author: "Karun Sharma"
 authors: "Umesh Gupta, Richa Golash, Vidushee Vats, <strong> Karun Sharma </strong>"
 venue: "International Conference on Emerging Techniques in Computational Intelligence"
 IEEE: https://ieeexplore.ieee.org/abstract/document/10330945/
-#code: https://github.com/leonidk/modecfg
+#code: https://github.com/leonidk/modecf
 #website: https://leonidk.github.io/modecfg
 #youtube: https://www.youtube.com/watch?v=r2426BR4r8o
 ---
