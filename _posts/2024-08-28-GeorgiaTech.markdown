@@ -8,6 +8,7 @@ author: "Karun Sharma"
 subtitle: "Research Intern"
 ---
 Working on Multimodal Visual grounding on images and videos using Open-Vocab Computer Vision techniques.
+
 [//]: # (<center>)
 
 [//]: # (<iframe src="http://www.youtube.com/embed/iywCOqZYVXg" frameborder="0" height="315" width="560"></iframe>)
