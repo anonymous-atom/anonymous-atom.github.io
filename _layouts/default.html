@@ -25,6 +25,15 @@
 </head>
 
 <body>
+  <!-- Table of Contents Sidebar -->
+  <nav id="toc-sidebar" class="toc-sidebar">
+    <ul class="toc-list">
+      <li><a href="#experience" class="toc-link">Experience</a></li>
+      <li><a href="#research" class="toc-link">Research</a></li>
+      <li><a href="#projects" class="toc-link">Projects</a></li>
+    </ul>
+  </nav>
+
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
@@ -63,7 +72,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Experience</h2>
+              <h2 id="experience">Experience</h2>
             </td>
           </tr>
         </table>
@@ -120,7 +129,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Research</h2>
+              <h2 id="research">Research</h2>
               <p>
                 I'm interested in Computer Vision, Multimodals, Machine Learning, Optimization
               </p>
@@ -182,7 +191,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Projects</h2>
+              <h2 id="projects">Projects</h2>
 <!--              <p>-->
 <!--                Besides my work on the RealSense depth sensors and the publications above, a sampling of my publicly disclosed work-->
 <!--              </p>-->
@@ -327,6 +336,87 @@
       </td>
     </tr>
   </table>
+
+  <script>
+    // Table of Contents functionality
+    (function() {
+      const tocLinks = document.querySelectorAll('.toc-link');
+      const sections = document.querySelectorAll('h2[id]');
+      
+      // Smooth scroll on click
+      tocLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            const offset = 100; // Offset from top
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Intersection Observer for highlighting active section
+      const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -60% 0px',
+        threshold: 0
+      };
+
+      const observerCallback = (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            // Remove active class from all links
+            tocLinks.forEach(link => {
+              link.classList.remove('active');
+            });
+            // Add active class to corresponding link
+            const activeLink = document.querySelector(`.toc-link[href="#${id}"]`);
+            if (activeLink) {
+              activeLink.classList.add('active');
+            }
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(observerCallback, observerOptions);
+      
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+
+      // Handle initial scroll position
+      const handleInitialActive = () => {
+        let currentSection = '';
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+        
+        if (currentSection) {
+          tocLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentSection}`) {
+              link.classList.add('active');
+            }
+          });
+        }
+      };
+
+      // Run on load and scroll
+      window.addEventListener('load', handleInitialActive);
+      window.addEventListener('scroll', handleInitialActive);
+    })();
+  </script>
 </body>
 
 </html>
