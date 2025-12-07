@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Research Intern, Advisors: Shengzhi Li (Meta llama) and Dr. Prayag Tiwari"
+date:   2024-09-01 22:21:59 +00:00
+image: /images/Halmstad_University.png
+categories: Experience
+author: "Karun Sharma"
+subtitle: "Research Intern"
+---
+Working on multimodal LLMs and any-to-any generation models. Implemented multi-stage training for interleaved generation in MLLMs. Added SDXL support for DDPO into trl library for custom diffusion model training. Pre-trained Any-to-Any model on CC3M, WebVid and AudioCap for encoder side alignment (on 8TB Data). Working on dataset and reward modeling to improve scientific question generation on long sequences.
+
